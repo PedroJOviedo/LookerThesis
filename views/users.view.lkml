@@ -99,7 +99,10 @@ dimension: full_name {
   sql:  concat (${first_name}, ,${last_name});;
 }
 
-
+  dimension: len_full_name {
+    type: number
+    sql:  len (${full_name}});;
+  }
 
   measure: count {
     type: count
