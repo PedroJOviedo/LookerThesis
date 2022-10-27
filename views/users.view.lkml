@@ -101,7 +101,7 @@ dimension: full_name {
 
   dimension: len_full_name {
     type: number
-    sql:  len (${full_name}});;
+    sql:  length (${full_name});;
   }
 
   measure: count {
