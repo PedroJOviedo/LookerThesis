@@ -104,6 +104,17 @@ dimension: full_name {
     sql:  length (${full_name});;
   }
 
+dimension: age_range {
+  type: tier
+  tiers: [0,10,20,30,40,50,60,70,80,90]
+  sql: ${age} ;;
+}
+
+measure: average_distinct_age{
+  type: average_distinct
+  sql: ${age} ;;
+}
+
   measure: count {
     type: count
     drill_fields: [detail*]
