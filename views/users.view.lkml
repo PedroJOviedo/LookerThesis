@@ -94,26 +94,26 @@ view: users {
     sql: ${TABLE}.zip ;;
   }
 
-dimension: full_name {
-  type: string
-  sql:  concat (${first_name},' ' ,${last_name});;
-}
+#dimension: full_name {
+#  type: string
+#  sql:  concat (${first_name},' ' ,${last_name});;
+#}
 
-  dimension: len_full_name {
-    type: number
-    sql:  length (${full_name});;
-  }
+#  dimension: len_full_name {
+#    type: number
+#    sql:  length (${full_name});;
+#  }
 
-dimension: age_range {
-  type: tier
-  tiers: [0,10,20,30,40,50,60,70,80,90]
-  sql: ${age} ;;
-}
+#dimension: age_range {
+#  type: tier
+#  tiers: [0,10,20,30,40,50,60,70,80,90]
+#  sql: ${age} ;;
+#}
 
-measure: average_distinct_age{
-  type: average_distinct
-  sql: ${age} ;;
-}
+#measure: average_distinct_age{
+#  type: average_distinct
+#  sql: ${age} ;;
+#}
 
   measure: count {
     type: count
