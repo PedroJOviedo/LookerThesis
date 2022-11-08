@@ -48,6 +48,16 @@ view: orders {
   measure: count {
     type: count
     drill_fields: [detail*]
+    html:
+    <a href="#drillmenu" target="_self">
+    {% if value > 10000 %}
+    <span style="color:#42a338;">{{ rendered_value }}</span>
+    {% elsif value > 5000 %}
+    <span style="color:#ffb92e;">{{ rendered_value }}</span>
+    {% else %}
+    <span style="color:#fa4444;">{{ rendered_value }}</span>
+    {% endif %}
+    </a>;;
   }
 
   # ----- Sets of fields for drilling ------
