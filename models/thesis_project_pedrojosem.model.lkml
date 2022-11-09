@@ -44,3 +44,4 @@ datagroup: thesis_project_pedrojosem_default_datagroup {
 
 
 explore: flights {}
+explore: airports {}
