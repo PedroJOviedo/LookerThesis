@@ -3,10 +3,9 @@ view: airports {
    sql_table_name: demo_db.airports ;;
   #
   # # Define your dimensions and measures here, like this:
-   dimension: user_id {
+   dimension: airport_city {
   #   description: "Unique ID for each user that has ordered"
      type: string
-
      sql: ${TABLE}.city ;;
    }
   #
