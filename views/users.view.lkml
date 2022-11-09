@@ -84,6 +84,11 @@ view: users {
     sql: ${TABLE}.last_name ;;
   }
 
+dimension: full_name {
+  type: string
+  sql:  concat(${first_name}," ", ${last_name}) ;;
+}
+
   dimension: state {
     type: string
     sql: ${TABLE}.state ;;
@@ -110,10 +115,10 @@ view: users {
 #  sql: ${age} ;;
 #}
 
-#measure: average_distinct_age{
-#  type: average_distinct
-#  sql: ${age} ;;
-#}
+measure: average_distinct_age{
+  type: average_distinct
+  sql: ${age} ;;
+}
 
   measure: count {
     type: count
