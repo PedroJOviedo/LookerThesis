@@ -99,15 +99,15 @@ dimension: full_name {
     sql: ${TABLE}.zip ;;
   }
 
-#dimension: full_name {
-#  type: string
-#  sql:  concat (${first_name},' ' ,${last_name});;
-#}
+dimension: full_State_Zip {
+  type: string
+  sql:  concat (${state},' ' ,${zip});;
+}
 
-#  dimension: len_full_name {
-#    type: number
-#    sql:  length (${full_name});;
-#  }
+  dimension: len_full_name {
+    type: number
+    sql:  length (${full_State_Zip});;
+  }
 
 #dimension: age_range {
 #  type: tier
