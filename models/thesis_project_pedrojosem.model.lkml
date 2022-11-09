@@ -41,3 +41,6 @@ datagroup: thesis_project_pedrojosem_default_datagroup {
     relationship: many_to_one
   }
 }
+
+
+explore: flights {}
