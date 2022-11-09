@@ -1,13 +1,14 @@
 view: airports {
   # # You can specify the table name if it's different from the view name:
-   sql_table_name: my_schema_name.airports ;;
+   sql_table_name: demo_db.airports ;;
   #
   # # Define your dimensions and measures here, like this:
-  # dimension: user_id {
+   dimension: user_id {
   #   description: "Unique ID for each user that has ordered"
-  #   type: number
-  #   sql: ${TABLE}.user_id ;;
-  # }
+     type: string
+
+     sql: ${TABLE}.city ;;
+   }
   #
   # dimension: lifetime_orders {
   #   description: "The total number of orders for each user"
