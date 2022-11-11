@@ -35,6 +35,15 @@ view: inventory_items {
     type: average
     sql: ${cost} ;;
   }
+  measure: negative_count {
+    type: number
+    sql: ${total_cost}*-1 ;;
+  }
+
+  measure: negative_1 {
+    type: number
+    sql: ${total_cost}*-1+5;;
+  }
 
   # Dates and timestamps can be represented in Looker using a dimension group of type: time.
   # Looker converts dates and timestamps to the specified timeframes within the dimension group.
